@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#whatisthiscar{
+    width: 100%;
+    .container{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title{
+            text-align: center;
+        }
+        .informationsaboutthiscar{
+            width: 100%;
+            h1{
+                color: $main-color;
+            }
+            p{
+                font-size: 17px;
+              
+            }
+        }
+        .title{
+            text-align: center;
+            h1{
+                color: $main-color;
+            }
+          
+        }
+        .typesofthiscar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .cars{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 5px 5px 20px rgb(111, 111, 111);
+            border-radius: 10px;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+      width: 100%;
+            margin-bottom: 30px;
+           margin-top: 20px;
+        height: 600px;
+        text-align: start;
+        .textdiv{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .suvtextdiv{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+            margin-bottom: -30px;
+        }
+            h1{
+                font-size: 25px;
+                color: $main-color;
+                text-align: start;
+
+            }
+            p{
+                font-size: 17px;
+                width: 95%;
+            }
+            img{
+            border-radius: 10px;
+            width: 80%;
+            height: 50%;
+            }
+            &:hover{
+                background-color: white;
+                color: $main-color;
+                transition: 0.3s;
+                transform: scale(1.02);
+            }
+        }
+        .row{
+            .title{
+                margin-top: 30px;
+                margin-bottom: 30px;
+               }
+            .newcar{
+                border-radius: 10px;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 5px 5px 20px rgb(111, 111, 111);
+                text-align: center;
+          
+                margin-bottom: 30px;
+                transition: transform 0.3s ease;
+                &:hover{
+                    background-color: white;
+                    color: $main-color;
+                    transition: 0.3s;
+                    transform: scale(1.05);
+                }
+                img{
+                    width: 100%;
+                    height: 50%;
+                    border-radius: 10px;
+                    margin-bottom: 15px;
+                }
+                p{
+                    font-size: 20px;
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+@media screen  and (max-width:900px) {
+    #whatissedan{
+        .container{
+            .sedans{
+                img{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen  and (max-width:500px) {
+    #whatissedan{
+        .container{
+            #whatissedan{
+                h1{
+                    font-size: 20px;
+                    
+                   }
+                   p{
+                    font-size: 15px;
+                }
+            }
+        
+        }
+    }
+}

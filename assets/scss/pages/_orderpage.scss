@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    #orderpage {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    align-items: center;
+     padding-left: 30px;
+     padding-right: 30px;
+        .title{
+            text-align: center;
+            color: $main-color;
+            font-weight: bolder;
+        }
+        .order-container {
+            width: 95%;
+            display: flex;
+            justify-content: start;
+padding-left: 30px;
+padding-right: 30px;
+            .row {
+                padding: 0px;
+                .formdiv {
+                    display: flex;
+                    justify-content: center;
+
+                    #successMessage {
+                        display: none;
+                        text-align: center;
+                        margin-top: 10px;
+                        font-weight: bold;
+                        padding: 30px;
+                        margin-top: 30px;
+                        p{
+                            font-size: 25px;
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 30px;
+                            color: $main-color;
+                        }
+                        img{
+                            width: 20%;
+                        }
+                    }
+                    form {
+                        display: block;
+                  .divform{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 30px;
+                    width: 97%;
+display: block;
+                  }
+                        input {
+                            width: 100%;
+                            padding: 15px;
+                            margin-bottom: 20px;
+                            border-radius: 10px;
+                            border: 1px solid $main-color;
+                            font-size: 17px;
+                        }
+
+                        button {
+                            width: 40%;
+                            padding: 15px;
+                            border-radius: 10px;
+                            background-color: $main-color;
+                            border: none;
+                            color: white;
+                            font-size: 20px;
+
+                            &:hover {
+                                background-color: white;
+                                color: $main-color;
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+                }
+
+                #orderpagediv {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    width: 90%;
+padding: 0px;
+                    .orderbox {
+                        text-align: center;
+                        font-weight: bolder;
+                        margin-top: 30px;
+width: 100%;
+                        .boxdiv {
+                            padding: 15px;
+                            border: 1px solid $main-color;
+                            border-radius: 10px;
+                        }
+
+                        .name {
+                            color: $main-color;
+                            margin-top: 10px;
+                        }
+
+                        p {
+                            border: 1px solid $main-color;
+                            border-radius: 10px;
+                            padding: 10px;
+                        }
+
+                        img {
+                            width: 100%;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    main {
+        #orderpage {
+            .order-container {
+                #orderpagediv {
+                    
+
+                    .name {
+                        color: $main-color;
+                        margin-top: 10px;
+                    }
+
+                    p {
+                        border: 1px solid $main-color;
+                        border-radius: 10px;
+                        padding: 10px;
+                        font-size: 10px;
+                    }
+                }
+
+                .formdiv {
+                    #orderform {
+                        input {
+                            padding: 10px;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        #orderpage {
+            .order-container {
+                .formdiv {
+                    #orderform {
+                        input {
+                            padding: 10px;
+                            font-size: 10px;
+                        }
+
+                        button {
+                            font-size: 10px;
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 380px) {
+    main {
+        #orderpage {
+            padding: 30px;
+            .order-container {
+                padding: 30px;
+                #orderpagediv{
+                    padding: 30px;
+                }
+                .formdiv {
+                    padding: 30px;
+                    #orderform {
+                        input {
+                            padding: 10px;
+                            font-size: 10px;
+                        }
+
+                        button {
+                            font-size: 10px;
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    main {
+        #orderpage {
+            .order-container {
+                .formdiv {
+                    #orderform {
+                        button {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    main {
+        #orderpage {
+            .order-container {
+                .formdiv {
+                    #orderform {
+                        input {
+                            padding: 10px;
+                            font-size: 8px;
+                        }
+
+                        button {
+                            font-size: 10px;
+                            padding: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// @media screen and (max-width: 380px) {
+//     main {
+//         #orderpage {
+//             .order-container {
+//                 #orderpagediv{
+//                     .orderbox {
+//                         text-align: center;
+//                         font-weight: bolder;
+//                         margin-top: 30px;
+
+//                         .boxdiv {
+//                             padding: 15px;
+//                             border: 1px solid $main-color;
+//                             border-radius: 10px;
+//                             // height: 330px;
+//                             width: 100%;
+//                         }
+
+//                         .name {
+//                             color: $main-color;
+//                             margin-top: 10px;
+//                         }
+
+//                         p {
+//                             border: 1px solid $main-color;
+//                             border-radius: 10px;
+//                             padding: 10px;
+//                             font-size:8px;
+                            
+//                         }
+
+//                         img {
+//                             width: 100%;
+//                             border-radius: 10px;
+//                         }
+//                 }
+//                 .formdiv {
+//                   #successMessage{
+//                     background-color: aquamarine;
+//                     p{
+//                         font-size: 20px !important;
+//                         color: rosybrown;
+//                         width: 100%;
+//                         span{
+//                             font-size: 20px;
+//                         }
+//                     }
+//                   }
+//                 }
+//             }
+//         }
+//     }
+//     }}
