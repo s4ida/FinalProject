@@ -10,12 +10,16 @@
     margin: 0;
     padding: 0;
     background-image: url('https://img.goodfon.ru/original/1680x1050/e/2c/holden-car-mashiny-avtomobili-doroga.jpg');
-    background-size: cover;  // Resmi sayfanın boyutuna sığdırır
-    background-position: center;  // Resmi ortalar
-    background-repeat: no-repeat;  // Tekrar etmez}
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;  
+    padding-bottom: 30px;
+    padding-top: 30px;
     .container{
         display: flex;
         justify-content: center;
+        padding-bottom: 30px;
+        padding-top: 30px;
     }
    
 }

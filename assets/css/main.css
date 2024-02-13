@@ -860,10 +860,14 @@ main #wishlist .container #wishlistdiv .box img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 #loginandregistersection .container {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 #login-form {
@@ -926,6 +930,83 @@ main #wishlist .container #wishlistdiv .box img {
 }
 #login-form #extraFields {
   display: none;
+}
+
+#calculator {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("http://pictures.dealer.com/l/lithiabmwseattle/0627/002ba2a03df70d83d63c9e2984cefafex.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.calculator-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 400px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.calculator-container h1 {
+  color: #333;
+}
+
+.calculator-container .input-group {
+  margin-bottom: 15px;
+}
+
+.calculator-container .input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.calculator-container .input-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.calculator-container button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.calculator-container button:hover {
+  background-color: #45a049;
+}
+
+.calculator-container #result-container {
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 * {
