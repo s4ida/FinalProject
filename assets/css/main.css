@@ -176,11 +176,26 @@
   }
 }
 @media screen and (max-width: 992px) {
-  main #whatisthiscar .container .typesofthiscar .cars #convertibleimg {
-    height: 20px !important;
+  main #whatisthiscar .container .typesofthiscar .cars .electriccar {
+    height: 30% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossoverimg {
+    height: 30% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .convertibleimg {
+    height: 35% !important;
   }
 }
 @media screen and (max-width: 768px) {
+  main #whatisthiscar .container .typesofthiscar .cars .electrictext p {
+    font-size: 18px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .electriccar {
+    height: 40% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossoverimg {
+    height: 45% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .compacttext p {
     font-size: 17px !important;
   }
@@ -220,6 +235,12 @@
   }
 }
 @media screen and (max-width: 480px) {
+  main #whatisthiscar .container .typesofthiscar .cars .electrictext p {
+    font-size: 15px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossoverimg {
+    height: 35% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
     font-size: 14px !important;
   }
@@ -241,6 +262,9 @@
   }
 }
 @media screen and (max-width: 360px) {
+  main #whatisthiscar .container .typesofthiscar .cars .electrictext p {
+    font-size: 13px !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .sport p {
     font-size: 13px !important;
   }
@@ -310,6 +334,12 @@
   }
 }
 @media screen and (max-width: 400px) {
+  main #whatisthiscar .container .typesofthiscar .cars .electriccar {
+    height: 30% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossoverimg {
+    height: 30% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .convertible p {
     font-size: 13px !important;
   }
@@ -330,6 +360,15 @@
   }
 }
 @media screen and (max-width: 320px) {
+  main #whatisthiscar .container .typesofthiscar .cars .electriccar {
+    height: 20% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossover p {
+    font-size: 12px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .crossoverimg {
+    height: 25% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .textdiv {
     padding-top: 10px;
   }

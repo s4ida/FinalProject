@@ -241,8 +241,14 @@
                 .typesofthiscar{
                     .cars
                     {
-                        #convertibleimg{
-                            height: 20px !important;
+                        .electriccar{
+                            height: 30% !important;
+                        }
+                        .crossoverimg{
+                            height: 30% !important;
+                        }
+                        .convertibleimg{
+                            height: 35% !important;
                         }
                     }
                 }
@@ -265,6 +271,17 @@
              
                   .typesofthiscar{
                  .cars{
+                    .electrictext{
+                        p{
+                            font-size: 18px !important;
+                        }
+                    }
+                    .electriccar{
+                        height: 40% !important;
+                    }
+                    .crossoverimg{
+                        height: 45% !important;
+                    }
                     .compacttext{
                         p{
                             font-size: 17px !important;
@@ -355,6 +372,14 @@
             .container{
                 .typesofthiscar{
                     .cars{
+                        .electrictext{
+                            p{
+                                font-size: 15px !important;
+                            }
+                        }
+                        .crossoverimg{
+                            height: 35% !important;
+                        }
                         .trucktext{
                             p{
                                 font-size: 14px !important;
@@ -417,7 +442,11 @@
             .container{
                 .typesofthiscar{
                   .cars{
-                 
+                    .electrictext{
+                        p{
+                            font-size: 13px !important;
+                        }
+                    }
                     .sport{
                         p{
                             font-size: 13px !important;
@@ -500,8 +529,6 @@
     }
   }
 
-
-
   @media screen  and (max-width:500px) {
     main{
       #whatisthiscar{
@@ -541,9 +568,6 @@
     }
   }
 
-
-
-
   @media screen  and (max-width:400px) {
     main{
       #whatisthiscar{
@@ -551,6 +575,12 @@
              
                   .typesofthiscar{
                  .cars{
+                    .electriccar{
+                        height: 30% !important;
+                    }
+                    .crossoverimg{
+                        height: 30% !important;
+                    }
                     .convertible{
                         p{
                             font-size: 13px !important;
@@ -589,6 +619,17 @@
              
                   .typesofthiscar{
                  .cars{
+                    .electriccar{
+                        height: 20% !important;
+                    }
+                    .crossover{
+                        p{
+                            font-size: 12px !important;
+                        }
+                    }
+                    .crossoverimg{
+                        height:25% !important;
+                    }
                   .textdiv{
               padding-top: 10px;
                       h1{
