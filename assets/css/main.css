@@ -143,6 +143,9 @@
   }
 }
 @media screen and (max-width: 992px) {
+  main #whatisthiscar .container .typesofthiscar .row .cars .compact {
+    height: 35%;
+  }
   main #whatisthiscar .container .typesofthiscar .row .cars .textdiv h1 {
     font-size: 20px;
   }
@@ -172,7 +175,18 @@
     height: 25% !important;
   }
 }
+@media screen and (max-width: 992px) {
+  main #whatisthiscar .container .typesofthiscar .cars #convertibleimg {
+    height: 20px !important;
+  }
+}
 @media screen and (max-width: 768px) {
+  main #whatisthiscar .container .typesofthiscar .cars .compacttext p {
+    font-size: 17px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .compact {
+    height: 45% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .suvimg {
     height: 40% !important;
   }
@@ -187,6 +201,9 @@
   }
 }
 @media screen and (max-width: 768px) {
+  main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
+    font-size: 17px !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .convertible p {
     font-size: 17px !important;
   }
@@ -195,6 +212,32 @@
   }
   main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
     font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
+    font-size: 14px !important;
+  }
+}
+@media screen and (max-width: 410px) {
+  main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
+    font-size: 13px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .truckimg {
+    height: 30% !important;
+  }
+}
+@media screen and (max-width: 345px) {
+  main #whatisthiscar .container .typesofthiscar .cars .trucktext p {
+    font-size: 12px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .truckimg {
+    height: 25% !important;
   }
 }
 @media screen and (max-width: 360px) {
@@ -216,6 +259,12 @@
   }
 }
 @media screen and (max-width: 500px) {
+  main #whatisthiscar .container .typesofthiscar .cars .compacttext p {
+    font-size: 14px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .compact {
+    height: 35% !important;
+  }
   main #whatisthiscar .container .typesofthiscar .cars .convertible p {
     font-size: 15px !important;
   }
