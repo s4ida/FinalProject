@@ -1,0 +1,91 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#loginandregistersection {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://img.goodfon.ru/original/1680x1050/e/2c/holden-car-mashiny-avtomobili-doroga.jpg');
+    background-size: cover;  // Resmi sayfanın boyutuna sığdırır
+    background-position: center;  // Resmi ortalar
+    background-repeat: no-repeat;  // Tekrar etmez}
+    .container{
+        display: flex;
+        justify-content: center;
+    }
+   
+}
+#login-form {
+   width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    fieldset {
+        border: 1px solid $main-color;
+        padding: 10px;
+        border-radius: 5px;
+
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="email"],
+    input[type="tel"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid $main-color;
+        border-radius: 3px;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    span {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    input[type="submit"] {
+        background-color: $main-color;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 16px;
+        &:hover{
+color: $main-color;
+background-color: white;
+transition: 0.3s;
+        }
+    }
+
+    output {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+    }
+    
+    #extraFields {
+        display: none;
+    }
+}

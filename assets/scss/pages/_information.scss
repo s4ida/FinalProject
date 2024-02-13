@@ -172,13 +172,6 @@
   }
 }
 
-
-
-
-
-
-
-
   @media screen  and (max-width:992px) {
     main{
       #whatisthiscar{
@@ -250,19 +243,15 @@
                         .convertibleimg{
                             height: 35% !important;
                         }
+                        .suvs{
+                            height: 30% !important;
+                        }
                     }
                 }
             }
         }
     }
 }
-
-
-
-
-
-
-
 
   @media screen  and (max-width:768px) {
     main{
@@ -305,7 +294,9 @@
                     }
                 }
                 
-             
+                .suvs{
+                    height: 45% !important;
+                }
                  }
               }
           }
@@ -319,6 +310,7 @@
         .container {
           .typesofthiscar {
             .cars {
+                
                 .trucktext{
                     p{
                         font-size: 17px !important;
@@ -392,7 +384,6 @@
     }
 }
 
-
 @media screen and (max-width:410px) {
     main{
         #whatisthiscar{
@@ -434,8 +425,6 @@
     }
 }
 
-
-
 @media screen and (max-width:360px) {
     main{
         #whatisthiscar{
@@ -475,7 +464,6 @@
     }
 }
 
-
   @media screen  and (max-width:500px) {
     main{
       #whatisthiscar{
@@ -503,7 +491,7 @@
                       }
           
                       p {
-                        font-size: 13px !important;
+                        font-size: 20px !important;
                       }
           
                     }
@@ -575,6 +563,14 @@
              
                   .typesofthiscar{
                  .cars{
+                    .suvtext{
+                        p{
+                            font-size: 15px  !important;
+                        }
+                    }
+                    .suvs{
+                        height: 25% !important;
+                    }
                     .electriccar{
                         height: 30% !important;
                     }
