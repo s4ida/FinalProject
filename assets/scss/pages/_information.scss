@@ -122,9 +122,9 @@
     }
 }
 @media screen  and (max-width:900px) {
-    #whatissedan{
+    #whatisthiscar{
         .container{
-            .sedans{
+            .cars{
                 img{
                     width: 80%;
                 }
@@ -133,10 +133,369 @@
     }
 }
 
-@media screen  and (max-width:500px) {
-    #whatissedan{
+
+
+@media screen  and (max-width:1200px) {
+  main{
+    #whatisthiscar{
         .container{
-            #whatissedan{
+           
+                .typesofthiscar{
+
+               .cars{
+                .textdiv{
+                    h1{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                .suvtextdiv{
+                    h1{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                img{
+                    height: 45%;
+                }
+                .suvimg{
+                    height: 35%;
+                }
+               }
+            }
+        }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+  @media screen  and (max-width:992px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                .row{
+                    .cars{
+                        .textdiv{
+                            h1{
+                                font-size: 20px;
+                            }
+                            p{
+                                font-size: 13px;
+                            }
+                        }
+                        .sport{
+                          h1{
+                              font-size: 18px;
+                          }
+                          p{
+                              font-size: 15px;
+                          }
+                        }
+                        img{
+                            height: 45%;
+                            width: 95%;
+                        }
+                        .sportimg{
+                          height: 35%;
+                        }
+                        .suvtextdiv{
+                            h1{
+                                font-size: 18px;
+                            }
+                            p{
+                                font-size: 13px;
+                            }
+                        }
+                        
+                        .suvimg{
+                            height: 25% !important;
+                        }
+                       }
+                }
+              }
+          }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+  @media screen  and (max-width:768px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                 .cars{
+                    .suvimg{
+                        height: 40% !important;
+                    }
+                  .sportimg{
+                    height: 45%;
+                  }
+                  .suvtextdiv{
+                    h1{
+                        font-size: 20px !important;
+                    }
+                    p{
+                        font-size: 15px !important;
+                    }
+                }
+                
+             
+                 }
+              }
+          }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    main {
+      #whatisthiscar {
+        .container {
+          .typesofthiscar {
+            .cars {
+             .convertible{
+                p{
+                    font-size: 17px !important;
+                }
+             }
+            
+  
+            .suvtextdiv {
+              h1 {
+                font-size: 20px !important;
+              }
+  
+              p {
+                font-size: 15px !important;
+              }
+  
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+  
+
+@media screen and (max-width:360px) {
+    main{
+        #whatisthiscar{
+            .container{
+                .typesofthiscar{
+                  .cars{
+                    .sport{
+                        p{
+                            font-size: 13px !important;
+                        }
+                        .sportimg{
+                            height: 20% !important;
+                        }
+                    }
+                    .sedanimg{
+                        height: 25% !important;
+                    }
+                    .sedan{
+                        p{
+                            font-size: 12px !important;
+                        }
+                    }
+                    .convertibleimg{
+                       height: 25% !important;
+                       margin-top: 30px;
+                       
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
+
+
+  @media screen  and (max-width:500px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                 .cars{
+                    .convertible{
+                        p{
+                            font-size: 15px !important;
+                        }
+                     }
+                    
+                    .suvtextdiv {
+                      h1 {
+                        font-size: 20px !important;
+                      }
+          
+                      p {
+                        font-size: 13px !important;
+                      }
+          
+                    }
+                  .textdiv{
+                      h1{
+                          font-size: 17px;
+                      }
+                      p{
+                          font-size: 15px;
+                      }
+                  }
+                  img{
+                      height: 45%;
+                      width: 95%;
+                  }
+                  .sportimg{
+                    height: 35%;
+                  }
+                 }
+              }
+          }
+      }
+    }
+  }
+
+
+
+  @media screen  and (max-width:500px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                 .cars{
+                    .suvtextdiv {
+                      h1 {
+                        font-size: 17px !important;
+                      }
+          
+                      p {
+                        font-size: 12px !important;
+                      }
+          
+                    }
+                  .textdiv{
+                      h1{
+                          font-size: 17px;
+                      }
+                      p{
+                          font-size: 15px;
+                      }
+                  }
+                  img{
+                      height: 45%;
+                      width: 95%;
+                  }
+                  .sportimg{
+                    height: 35%;
+                  }
+                 }
+              }
+          }
+      }
+    }
+  }
+
+
+
+
+  @media screen  and (max-width:400px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                 .cars{
+                    .convertible{
+                        p{
+                            font-size: 13px !important;
+                        }
+                     }
+                    
+                  .textdiv{
+                      h1{
+                          font-size: 15px;
+                      }
+                      p{
+                          font-size: 13px;
+                      }
+                  }
+             
+                  img{
+                      height: 30%;
+                      width: 95%;
+                      margin-top: 20px;
+                      margin-bottom: 0px;
+                  }
+                  .sportimg{
+                    height: 30%;
+                  }
+                 }
+              }
+          }
+      }
+    }
+  }
+
+  @media screen  and (max-width:320px) {
+    main{
+      #whatisthiscar{
+          .container{
+             
+                  .typesofthiscar{
+                 .cars{
+                  .textdiv{
+              padding-top: 10px;
+                      h1{
+                          font-size: 13px;
+                      }
+                      p{
+                          font-size: 12px;
+                      }
+                  }
+                  img{
+                      height: 25%;
+                      width: 95%;
+                      
+                      margin-bottom: 0px;
+                  }
+                 }
+              }
+          }
+      }
+    }
+  }
+
+@media screen  and (max-width:500px) {
+   main{
+    #whatisthiscar{
+        .container{
+            .informationsaboutthiscar{
                 h1{
                     font-size: 20px;
                     
@@ -144,8 +503,16 @@
                    p{
                     font-size: 15px;
                 }
+           
             }
         
         }
     }
+   }
 }
+
+
+
+
+
+

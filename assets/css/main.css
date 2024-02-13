@@ -118,15 +118,189 @@
 }
 
 @media screen and (max-width: 900px) {
-  #whatissedan .container .sedans img {
+  #whatisthiscar .container .cars img {
     width: 80%;
   }
 }
-@media screen and (max-width: 500px) {
-  #whatissedan .container #whatissedan h1 {
+@media screen and (max-width: 1200px) {
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv h1 {
+    font-size: 18px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv p {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv h1 {
+    font-size: 18px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars img {
+    height: 45%;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvimg {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 992px) {
+  main #whatisthiscar .container .typesofthiscar .row .cars .textdiv h1 {
     font-size: 20px;
   }
-  #whatissedan .container #whatissedan p {
+  main #whatisthiscar .container .typesofthiscar .row .cars .textdiv p {
+    font-size: 13px;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .sport h1 {
+    font-size: 18px;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .sport p {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars img {
+    height: 45%;
+    width: 95%;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .sportimg {
+    height: 35%;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .suvtextdiv h1 {
+    font-size: 18px;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .suvtextdiv p {
+    font-size: 13px;
+  }
+  main #whatisthiscar .container .typesofthiscar .row .cars .suvimg {
+    height: 25% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #whatisthiscar .container .typesofthiscar .cars .suvimg {
+    height: 40% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sportimg {
+    height: 45%;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv h1 {
+    font-size: 20px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #whatisthiscar .container .typesofthiscar .cars .convertible p {
+    font-size: 17px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv h1 {
+    font-size: 20px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
+    font-size: 15px !important;
+  }
+}
+@media screen and (max-width: 360px) {
+  main #whatisthiscar .container .typesofthiscar .cars .sport p {
+    font-size: 13px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sport .sportimg {
+    height: 20% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sedanimg {
+    height: 25% !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sedan p {
+    font-size: 12px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .convertibleimg {
+    height: 25% !important;
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main #whatisthiscar .container .typesofthiscar .cars .convertible p {
+    font-size: 15px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv h1 {
+    font-size: 20px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
+    font-size: 13px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv h1 {
+    font-size: 17px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv p {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars img {
+    height: 45%;
+    width: 95%;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sportimg {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 500px) {
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv h1 {
+    font-size: 17px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .suvtextdiv p {
+    font-size: 12px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv h1 {
+    font-size: 17px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv p {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars img {
+    height: 45%;
+    width: 95%;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sportimg {
+    height: 35%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main #whatisthiscar .container .typesofthiscar .cars .convertible p {
+    font-size: 13px !important;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv h1 {
+    font-size: 15px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv p {
+    font-size: 13px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars img {
+    height: 30%;
+    width: 95%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .sportimg {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 320px) {
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv {
+    padding-top: 10px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv h1 {
+    font-size: 13px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars .textdiv p {
+    font-size: 12px;
+  }
+  main #whatisthiscar .container .typesofthiscar .cars img {
+    height: 25%;
+    width: 95%;
+    margin-bottom: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  main #whatisthiscar .container .informationsaboutthiscar h1 {
+    font-size: 20px;
+  }
+  main #whatisthiscar .container .informationsaboutthiscar p {
     font-size: 15px;
   }
 }
