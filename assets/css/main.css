@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -1096,39 +1097,59 @@ main #newspage .commentandrating form button:hover {
   box-sizing: border-box;
 }
 
-#faqsection {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
+main .faqsection {
+  width: 100%;
 }
-
-.faq-container {
-  max-width: 600px;
-  margin: 50px auto;
+main .faqsection .container {
+  width: 95%;
 }
-
-.accordion {
-  border: 1px solid #ccc;
+main .faqsection .container h2 {
+  color: #FF2800;
+  font-weight: bolder;
 }
-
-.question {
+main .faqsection .container .acc-btn {
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  font-weight: bolder;
+  outline: none;
+  text-align: left;
+  transition: all 0.5s linear;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+main .faqsection .container .acc-btn:after {
+  content: "➤";
+  color: #FF2800;
+  float: right;
+  transition: 0.3s;
+}
+main .faqsection .container .acc-btn.is-open:after {
+  transform: rotate(90deg);
+}
+main .faqsection .container .acc-btn:hover, main .faqsection .container .acc-btn.is-open {
+  color: #FF2800;
+  font-weight: bold;
+}
+main .faqsection .container .acc-content {
+  max-height: 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  margin: 0 2rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
   border-bottom: 1px solid #ccc;
 }
-
-.question h3 {
-  margin: 0;
-  padding: 10px;
-  cursor: pointer;
-  background-color: #f4f4f4;
+main .faqsection .container .credit {
+  text-align: center;
+  padding: 1rem;
 }
-
-.answer {
-  padding: 10px;
-  display: none;
-}
-
-.answer.active {
-  display: block;
+main .faqsection .container .credit a {
+  text-decoration: wavy underline;
+  color: dodgerblue;
 }
 
 * {

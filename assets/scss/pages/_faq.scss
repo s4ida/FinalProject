@@ -3,37 +3,70 @@
     padding: 0;
     box-sizing: border-box;
 }
-#faqsection {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+main{
+    .faqsection{
+        width: 100%;
+       
+        .container{
+            width: 95%;
+            h2{
+                color: $main-color;
+                font-weight: bolder;
+            }
+            .acc-btn {
+                width: 100%;
+                font-size: 20px;
+                cursor: pointer;
+                background: inherit;
+                border: none;
+                font-weight: bolder;
+                outline: none;
+                text-align: left;
+                transition: all 0.5s linear;
+                margin-bottom: 10px;
+                margin-top: 10px;
+          
+                &:after {
+                  content: "\27A4";
+                  color: $main-color;
+                  float: right;
+                  transition: 0.3s;
+                }
+          
+                &.is-open:after {
+                  transform: rotate(90deg);
+                }
+          
+                &:hover,
+                &.is-open {
+                  color:$main-color;
+                  font-weight: bold;
+                }
+              }
+                   
+  
+      .acc-content {
+        max-height: 0;
+        color: rgba(0, 0, 0, 0.75);
+        font-size: 20px;
+        margin: 0 2rem;
+        padding-left: 1rem;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        border-bottom: 1px solid #ccc;
+      }
+      
 
-.faq-container {
-    max-width: 600px;
-    margin: 50px auto;
-}
-
-.accordion {
-    border: 1px solid #ccc;
-}
-
-.question {
-    border-bottom: 1px solid #ccc;
-}
-
-.question h3 {
-    margin: 0;
-    padding: 10px;
-    cursor: pointer;
-    background-color: #f4f4f4;
-}
-
-.answer {
-    padding: 10px;
-    display: none;
-}
-
-.answer.active {
-    display: block;
+  
+      .credit {
+        text-align: center;
+        padding: 1rem;
+      }
+  
+      .credit a {
+        text-decoration: wavy underline;
+        color: dodgerblue;
+      }
+        }
+    }
 }
