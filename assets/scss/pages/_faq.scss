@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#faqsection {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.accordion {
+    border: 1px solid #ccc;
+}
+
+.question {
+    border-bottom: 1px solid #ccc;
+}
+
+.question h3 {
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+
+.answer {
+    padding: 10px;
+    display: none;
+}
+
+.answer.active {
+    display: block;
+}

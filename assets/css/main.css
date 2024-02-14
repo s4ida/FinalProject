@@ -846,11 +846,67 @@ main #wishlist .container #wishlistdiv .box img {
   border-radius: 10px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main #newspage {
+  width: 100%;
+}
+main #newspage #carsnews .news .boxdiv .imgdiv {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+main #newspage #carsnews .news .boxdiv .imgdiv img {
+  width: 100%;
+  height: 80%;
+}
+main #newspage #carsnews .news .boxdiv .imgdiv2 img {
+  width: 100%;
+  height: 90%;
+}
+main #newspage #carsnews .news .boxdiv h1 {
+  color: #FF2800;
+}
+main #newspage #carsnews .news .boxdiv p {
+  margin-bottom: 20px;
+}
+main #newspage #commentdiv .comments h1 {
+  font-weight: bolder;
+  font-size: 20px;
+}
+main #newspage .commentandrating {
+  padding-left: 15px;
+}
+main #newspage .commentandrating form {
+  width: 50%;
+}
+main #newspage .commentandrating form input {
+  border: 1px solid black;
+}
+main #newspage .commentandrating form textarea {
+  border: 1px solid black;
+}
+main #newspage .commentandrating form button {
+  background-color: #FF2800;
+  border-radius: 5px;
+  padding: 15px;
+  border: none;
+  color: white;
+}
+main #newspage .commentandrating form button:hover {
+  color: #FF2800;
+  transition: 0.5s;
+  background-color: white;
+}
+
 .news-content {
   max-width: 600px;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: center;
@@ -858,21 +914,23 @@ main #wishlist .container #wishlistdiv .box img {
 
 .rating-section {
   display: flex;
-  align-items: center;
+  margin-top: 20px;
 }
-
-.stars {
+.rating-section p {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: 3px;
+}
+.rating-section .stars {
   font-size: 24px;
   cursor: pointer;
   margin-left: 10px;
 }
-
-.star {
+.rating-section .stars .star {
   margin: 0 3px;
 }
-
-.star:hover,
-.star.active {
+.rating-section .stars .star:hover, .rating-section .stars .star.active {
   color: #ffac2f;
   text-shadow: 0 0 10px #ffac2f;
   transition: text-shadow 0.3s ease;
@@ -1036,6 +1094,47 @@ main #wishlist .container #wishlistdiv .box img {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+#faqsection {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.accordion {
+  border: 1px solid #ccc;
+}
+
+.question {
+  border-bottom: 1px solid #ccc;
+}
+
+.question h3 {
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f4f4f4;
+}
+
+.answer {
+  padding: 10px;
+  display: none;
+}
+
+.answer.active {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
@@ -1052,11 +1151,18 @@ header .container .nav {
 header .container .nav img {
   width: 60%;
 }
+header .container .nav .collapseDiv {
+  background-color: red;
+}
 header .container .nav .collapseDiv ul {
+  background-color: #00FBAC;
+  width: 100%;
   width: 70%;
   display: flex;
   gap: 30px;
-  font-size: 18px;
+}
+header .container .nav .collapseDiv ul li a {
+  font-size: 15px;
 }
 header .container .nav .collapseDiv ul li a:hover {
   color: #FF2800;
@@ -3211,5 +3317,18 @@ footer .container .footdiv p {
   }
   main #news .container #newsaboutcars .newsbox .news p {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .container .socialmediadiv h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 400px) {
+  main #orderpage .order-container #orderpagediv .orderbox .boxdiv img {
+    width: 100%;
+  }
+  main #orderpage .order-container #orderpagediv .orderbox .boxdiv p {
+    font-size: 12px;
   }
 }

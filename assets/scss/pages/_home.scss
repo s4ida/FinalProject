@@ -16,18 +16,23 @@ z-index: 1;
         width: 60%;
     }
 .collapseDiv{
+    background-color: red;
     ul{
+        background-color: #00FBAC;
+        width: 100%;
         li{
             a{
                 &:hover{
                     color: $main-color;
                 }
+                font-size: 15px;
             }
         }
         width: 70%;
         display: flex;
+       
+
        gap: 30px;
-       font-size: 18px;
         .nav-link.home:hover + .homediv,
 .nav-link.platform:hover + .platform-div,
 .nav-link.news:hover + .newsdiv,
@@ -2772,3 +2777,41 @@ footer{
         }
     }
 }
+
+@media screen  and (max-width:400px){
+    footer{
+        .container{
+            .socialmediadiv{
+                h1{
+                    font-size: 25px;
+                }
+              
+            }
+        }
+    }
+}
+@media screen  and (max-width:400px){
+main{
+        #orderpage{
+
+.order-container{
+    #orderpagediv{
+        .orderbox{
+            .boxdiv{
+                img{
+                    width: 100%;
+                }
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+        }
+          
+        }
+    }
+
+
+

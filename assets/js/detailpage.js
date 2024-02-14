@@ -2,14 +2,13 @@ const detailpagediv = document.getElementById('detailpagediv');
 const features = document.getElementById('features')
 const photos = document.getElementById('photos')
 const descriptionsdiv = document.getElementById('descriptionsdiv')
-function getproducts() {
+function getdetails() {
 photos.innerHTML = '';
 descriptionsdiv.innerHTML = '' ;
 
     let detailpage = JSON.parse(localStorage.getItem('detailpage')) || [];
     console.log(detailpage);
 
-  
     detailpage.map((item) => {
         const ul= document.createElement('ul');
        ul.innerHTML = `
@@ -70,4 +69,4 @@ descriptions.innerHTML = `
      descriptionsdiv.appendChild(descriptions)
     });
 }
-getproducts();
+getdetails();

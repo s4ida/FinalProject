@@ -126,9 +126,7 @@ searchform.addEventListener('submit', searchbyname);
 
 
 const filterdata = document.getElementById('filterdata')
-// function openProductDetail(productId) {
-//     console.log(`Open product detail for ID: ${productId}`);
-//   }
+
 function sortdatadefault(){
    ourproducts.innerHTML = ''
     let selectvalue = filterdata.value
@@ -232,8 +230,8 @@ function sortdatadefault(){
             
                  axios.get(`https://655c2fe4ab37729791aa011f.mockapi.io/swp102/basket`)
                 .then(res=>{
-                    products = res.data
-                   products.map((item,index)=>{
+                  news = res.data
+                    news.map((item,index)=>{
                         let newsbox = document.createElement('div')
                         newsbox.className = 'newsbox col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4'
                         newsbox.innerHTML = `
@@ -254,9 +252,9 @@ function sortdatadefault(){
             }
             function addtonewspage(id) {
               let newspage = JSON.parse(localStorage.getItem('newspage')) || [];
-              newspage.push(products.find(item => item.id == id));
-              const maxDetailPageItems = 1;
-              if (newspage.length > maxDetailPageItems) {
+              newspage.push(news.find(item => item.id == id));
+              const maxNewsPageItems = 1;
+              if (newspage.length > maxNewsPageItems) {
                 newspage.shift();
               }
               localStorage.setItem('newspage', JSON.stringify(newspage));
