@@ -1,7 +1,6 @@
 const ourproducts = document.getElementById ('ourproducts')
 const pagination = document.getElementById('pagination')
 
-
 function getproducts () {
 
      axios.get(`https://655c2fe4ab37729791aa011f.mockapi.io/swp102/products`)
@@ -227,8 +226,42 @@ function sortdatadefault(){
             }
             filterdata.addEventListener('change',sortdataZA)
 
-
-
+            const newsaboutcars= document.getElementById('newsaboutcars')
+            
+            function getnews () {
+            
+                 axios.get(`https://655c2fe4ab37729791aa011f.mockapi.io/swp102/basket`)
+                .then(res=>{
+                    products = res.data
+                   products.map((item,index)=>{
+                        let newsbox = document.createElement('div')
+                        newsbox.className = 'newsbox col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4'
+                        newsbox.innerHTML = `
+                    <div class="news">
+                    <img src="${item.image}" alt="">
+                    <h1>${item.title}</h1>
+                    <p>${item.abbreviation}<p>
+                  
+                    <button class="ReadMore" onclick="addtonewspage(${item.id})"><a href="/news.html">Read More</a><i class="fa-solid fa-arrow-right"></i></button>
+            
+            </div>
+                    `
+                
+                    newsaboutcars.appendChild(newsbox)
+                    })
+                  
+                })
+            }
+            function addtonewspage(id) {
+              let newspage = JSON.parse(localStorage.getItem('newspage')) || [];
+              newspage.push(products.find(item => item.id == id));
+              const maxDetailPageItems = 1;
+              if (newspage.length > maxDetailPageItems) {
+                newspage.shift();
+              }
+              localStorage.setItem('newspage', JSON.stringify(newspage));
+            }
+            getnews()
 
          
 

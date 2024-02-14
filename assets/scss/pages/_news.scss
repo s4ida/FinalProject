@@ -1,0 +1,31 @@
+.news-content {
+    max-width: 600px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+}
+
+.stars {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.star {
+    margin: 0 3px;
+}
+
+.star:hover,
+.star.active {
+    color: #ffac2f;
+    text-shadow: 0 0 10px #ffac2f;
+    transition: text-shadow 0.3s ease;
+}

@@ -846,6 +846,38 @@ main #wishlist .container #wishlistdiv .box img {
   border-radius: 10px;
 }
 
+.news-content {
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+}
+
+.stars {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.star {
+  margin: 0 3px;
+}
+
+.star:hover,
+.star.active {
+  color: #ffac2f;
+  text-shadow: 0 0 10px #ffac2f;
+  transition: text-shadow 0.3s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -947,15 +979,13 @@ main #wishlist .container #wishlistdiv .box img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.container {
+#calculator .container {
   display: flex;
   justify-content: center;
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
-.calculator-container {
+#calculator .calculator-container {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -965,31 +995,26 @@ main #wishlist .container #wishlistdiv .box img {
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-.calculator-container h1 {
+#calculator .calculator-container h1 {
   color: #333;
 }
-
-.calculator-container .input-group {
+#calculator .calculator-container .input-group {
   margin-bottom: 15px;
 }
-
-.calculator-container .input-group label {
+#calculator .calculator-container .input-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
   color: #555;
 }
-
-.calculator-container .input-group input {
+#calculator .calculator-container .input-group input {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
 }
-
-.calculator-container button {
+#calculator .calculator-container button {
   background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
@@ -999,12 +1024,10 @@ main #wishlist .container #wishlistdiv .box img {
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
-
-.calculator-container button:hover {
+#calculator .calculator-container button:hover {
   background-color: #45a049;
 }
-
-.calculator-container #result-container {
+#calculator .calculator-container #result-container {
   margin-top: 20px;
   font-weight: bold;
 }
@@ -1277,6 +1300,8 @@ main #entrancesection {
   background-color: red;
   width: 100%;
   height: 700px;
+  margin-top: -30px;
+  position: relative;
 }
 main #entrancesection .carousel {
   width: 100%;
@@ -2178,44 +2203,82 @@ main #news .container .title h3 {
 main #news .container .title h1 {
   font-weight: bolder;
 }
-main #news .container .newsdiv {
-  border-radius: 10px;
-  padding: 25px;
+main #news .container #newsaboutcars {
+  width: 100%;
+}
+main #news .container #newsaboutcars .newsbox {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+main #news .container #newsaboutcars .newsbox .news {
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgb(111, 111, 111);
   text-align: center;
   margin-bottom: 30px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
-main #news .container .newsdiv img {
+main #news .container #newsaboutcars .newsbox .news img {
   width: 100%;
   border-radius: 10px;
+  height: 50%;
 }
-main #news .container .newsdiv h1 {
+main #news .container #newsaboutcars .newsbox .news h1 {
+  font-weight: bolder;
+  color: black;
   font-size: 20px;
   margin-top: 15px;
-  font-weight: bolder;
-  color: black;
 }
-main #news .container .newsdiv p {
-  color: black;
+main #news .container #newsaboutcars .newsbox .news p {
   font-weight: bolder;
 }
-main #news .container .newsdiv a {
+main #news .container #newsaboutcars .newsbox .news p span {
+  color: #FF2800;
+}
+main #news .container #newsaboutcars .newsbox .news button {
+  background-color: white;
+  margin-left: 10px;
+  width: 50%;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+main #news .container #newsaboutcars .newsbox .news button a {
   color: #FF2800;
   text-decoration: none;
 }
-main #news .container .newsdiv a i {
-  margin-left: 5px;
+main #news .container #newsaboutcars .newsbox .news button i {
+  color: #FF2800;
 }
-main #news .container .newsdiv a:hover i {
-  margin-left: 15px;
+main #news .container #newsaboutcars .newsbox .news button i:hover {
+  color: black;
   transition: 0.5s;
 }
-main #news .container .newsdiv:hover {
+main #news .container #newsaboutcars .newsbox .news button:hover {
+  color: black;
+  transition: 0.5s;
+  background-color: #FF2800;
+}
+main #news .container #newsaboutcars .newsbox .news button:hover a {
+  margin-right: 10px;
+  transition: 0.5s;
+  color: white;
+}
+main #news .container #newsaboutcars .newsbox .news button:hover i {
+  color: white;
+}
+main #news .container #newsaboutcars .newsbox .news:hover {
+  transform: scale(1.01);
+}
+main #news .container #newsaboutcars .newsbox .news:hover h1 {
+  color: #FF2800;
+  transition: 0.3s;
+}
+main #news .container #newsaboutcars .newsbox:hover {
   transform: scale(1.1);
 }
-main #news .container .newsdiv:hover h1 {
+main #news .container #newsaboutcars .newsbox:hover h1 {
   color: #FF2800;
 }
 
@@ -3132,5 +3195,21 @@ footer .container .footdiv p {
     width: 30%;
     font-size: 10px;
     padding: 10px;
+  }
+}
+@media screen and (max-width: 460px) {
+  main #news .container #newsaboutcars .newsbox .news img {
+    height: 40%;
+  }
+}
+@media screen and (max-width: 350px) {
+  main #news .container #newsaboutcars .newsbox .news img {
+    height: 30%;
+  }
+  main #news .container #newsaboutcars .newsbox .news h1 {
+    font-size: 15px;
+  }
+  main #news .container #newsaboutcars .newsbox .news p {
+    font-size: 15px;
   }
 }
