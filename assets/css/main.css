@@ -1055,7 +1055,8 @@ main #newspage .commentandrating form button:hover {
   margin-bottom: 30px;
 }
 #calculator .calculator-container h1 {
-  color: #333;
+  color: #FF2800;
+  font-size: 30px;
 }
 #calculator .calculator-container .input-group {
   margin-bottom: 15px;
@@ -1074,7 +1075,7 @@ main #newspage .commentandrating form button:hover {
   box-sizing: border-box;
 }
 #calculator .calculator-container button {
-  background-color: #4caf50;
+  background-color: #FF2800;
   color: #fff;
   padding: 10px 20px;
   border: none;
@@ -1084,7 +1085,9 @@ main #newspage .commentandrating form button:hover {
   transition: background-color 0.3s ease;
 }
 #calculator .calculator-container button:hover {
-  background-color: #45a049;
+  background-color: white;
+  color: #FF2800;
+  transition: 0.3s;
 }
 #calculator .calculator-container #result-container {
   margin-top: 20px;
@@ -1099,6 +1102,9 @@ main #newspage .commentandrating form button:hover {
 
 main .faqsection {
   width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
 }
 main .faqsection .container {
   width: 95%;
@@ -1156,12 +1162,78 @@ main .faqsection .container .credit a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+main #about-us {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+main #about-us .container {
+  width: 95%;
+  padding: 0px;
+}
+main #about-us .container h2 {
+  color: #FF2800;
+  font-weight: bolder;
+}
+main #about-us .container .acc-btn {
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+  font-weight: bolder;
+  outline: none;
+  text-align: left;
+  transition: all 0.5s linear;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+main #about-us .container .acc-btn:after {
+  content: "➤";
+  color: #FF2800;
+  float: right;
+  transition: 0.3s;
+}
+main #about-us .container .acc-btn.is-open:after {
+  transform: rotate(90deg);
+}
+main #about-us .container .acc-btn:hover, main #about-us .container .acc-btn.is-open {
+  color: #FF2800;
+  font-weight: bold;
+}
+main #about-us .container .acc-content {
+  max-height: 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 20px;
+  margin: 0 2rem;
+  padding-left: 1rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  border-bottom: 1px solid #ccc;
+}
+main #about-us .container .credit {
+  text-align: center;
+  padding: 1rem;
+}
+main #about-us .container .credit a {
+  text-decoration: wavy underline;
+  color: dodgerblue;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 header {
   width: 100%;
   z-index: 1;
+  margin-bottom: 25px;
 }
 header .container {
   width: 95%;
@@ -1172,18 +1244,14 @@ header .container .nav {
 header .container .nav img {
   width: 60%;
 }
-header .container .nav .collapseDiv {
-  background-color: red;
-}
 header .container .nav .collapseDiv ul {
-  background-color: #00FBAC;
   width: 100%;
-  width: 70%;
+  justify-content: flex-end;
   display: flex;
-  gap: 30px;
+  gap: 35px;
 }
 header .container .nav .collapseDiv ul li a {
-  font-size: 15px;
+  font-size: 18px;
 }
 header .container .nav .collapseDiv ul li a:hover {
   color: #FF2800;
@@ -1377,50 +1445,6 @@ header .container .nav .collapseDiv ul .newsdiv,
 header .container .nav .collapseDiv ul .shopdiv,
 header .container .nav .collapseDiv ul .pagesdiv {
   display: none;
-}
-header .container .nav .collapseDiv .basket {
-  position: relative;
-  font-size: 25px;
-  margin-right: 20px;
-}
-header .container .nav .collapseDiv .basket:hover {
-  color: #FF2800;
-  transition: 0.3s;
-}
-header .container .nav .collapseDiv .basket:hover span {
-  background-color: white;
-  color: #FF2800;
-}
-header .container .nav .collapseDiv .basket span {
-  position: absolute;
-  border-radius: 50%;
-  height: 22px;
-  width: 22px;
-  background-color: #FF2800;
-  font-size: 15px;
-  left: 33px;
-  bottom: 18px;
-}
-header .container .nav .collapseDiv .wishlist {
-  position: relative;
-  font-size: 25px;
-  margin-right: 20px;
-}
-header .container .nav .collapseDiv .wishlist:hover {
-  color: #FF2800;
-  transition: 0.3s;
-}
-header .container .nav .collapseDiv .sell {
-  background-color: #FF2800;
-  color: white;
-  border: 2px solid #FF2800;
-  font-size: 20px;
-}
-header .container .nav .collapseDiv .sell:hover {
-  background-color: white;
-  color: #FF2800;
-  border: 2px solid black;
-  transition: 0.3s;
 }
 
 main #entrancesection {
@@ -1730,18 +1754,25 @@ main #products .container {
   width: 95%;
 }
 main #products .container #pagination {
-  background-color: #FF2800;
-  color: white;
-  border: 2px solid #FF2800;
-  margin-left: 10px;
-  width: 30%;
-  border-radius: 5px;
-  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
-main #products .container #pagination:hover {
-  background-color: white;
-  border: 2px solid black;
+main #products .container #pagination span {
+  font-weight: bolder;
+  font-size: 25px;
+}
+main #products .container #pagination #paginationbtn {
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
   color: #FF2800;
+}
+main #products .container #pagination #paginationbtn:hover {
+  color: black;
   transition: 0.3s;
 }
 main #products .container .title {

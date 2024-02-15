@@ -51,26 +51,17 @@
               
             </li>
             <li>
+              <a class="nav-link pages" href="/wishlist.html">Favorites</a>
+          </li>
+            <li>
                 <a class="nav-link shop" href="/faq.html">FAQ</a>
              
             </li>
             <li>
-                <a class="nav-link pages" href="#">Pages</a>
-                <div class="pagesdiv">
-                    <p><a href="">About Us</a></p>
-                    <p><a href="">FAQ</a></p>
-                    <p><a href="">How It Works</a></p>
-                    <p><a href="">Pricing Services</a></p>
-                    <p><a href="">VIN</a></p>
-                    <p><a href="">Car Loan Calculator</a></p>
-                    <p><a href="">Custom Services</a></p>
-                </div>
+                <a class="nav-link pages" href="/aboutus.html">About US</a>
+              
             </li>
-            <li>
-                <a class="nav-link pages" href="#">Get in Touch</a>
-            </li>
-          
-    
+           
           </ul>
         </div>
       </nav>
@@ -187,7 +178,13 @@
   <div id="ourproducts" class="row">
     <div id="messageContainer"></div>
   </div>
-  <button id="pagination">Load More Cars</button>
+  <div id="pagination" class="pagination">
+    <button id="paginationbtn" onclick="changePage(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+    <span id="currentPage">1</span>
+    <div id="nextButtonContainer">
+      <button style="width: 100%;" id="paginationbtn"  onclick="changePage(1)"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+  </div>
 
 </div>
             </section>

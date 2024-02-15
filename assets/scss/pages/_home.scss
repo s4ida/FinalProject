@@ -8,6 +8,7 @@
 header{
   width: 100%;
 z-index: 1;
+margin-bottom: 25px;
   .container{
     width: 95%;
   .nav{
@@ -16,23 +17,20 @@ z-index: 1;
         width: 60%;
     }
 .collapseDiv{
-    background-color: red;
+   
     ul{
-        background-color: #00FBAC;
         width: 100%;
+        justify-content: flex-end;
         li{
             a{
                 &:hover{
                     color: $main-color;
                 }
-                font-size: 15px;
+                font-size: 18px;
             }
         }
-        width: 70%;
         display: flex;
-       
-
-       gap: 30px;
+       gap: 35px;
         .nav-link.home:hover + .homediv,
 .nav-link.platform:hover + .platform-div,
 .nav-link.news:hover + .newsdiv,
@@ -226,53 +224,8 @@ padding: 0px;
    
 }
     }
-    .basket{
-        position: relative;
-        font-size: 25px;
-        margin-right: 20px;
-        &:hover{
-            color: $main-color;
-            transition: 0.3s;
-            span{
-                background-color: white;
-                color: $main-color;
-            }
-        }
-        span{
-            position: absolute;
-            border-radius: 50%;
-            height: 22px;
-            width: 22px;
-            background-color: $main-color;
-       
-            font-size: 15px;
-      left: 33px;
-     bottom: 18px;
-        }
-    }
-    .wishlist{
-        position: relative;
-        font-size: 25px;
-        margin-right: 20px;
-        &:hover{
-            color: $main-color;
-            transition: 0.3s;
-            }    }
-    .sell{
-        background-color: $main-color;
-        color: white;
-        border: 2px solid $main-color;
-        font-size: 20px;
-        &:hover{
-            background-color: white;
-            color: $main-color;
-            border: 2px solid black;
-            transition: 0.3s;
-       
-        }
-    }
-}
 
+}
   }
     
     }
@@ -658,22 +611,29 @@ $body-background: #353535;
     padding-bottom: 30px;
     .container{
         width: 95%;
-       #pagination{
-            background-color: $main-color;
-            color: white;
-            border: 2px solid $main-color;
-            margin-left: 10px;
-                width: 30%;
-                border-radius: 5px;
-                padding: 5px;
-            &:hover{
-                background-color: white;
-                border: 2px solid black;
-                color: $main-color;
-                transition: 0.3s;
-                
-            }
+  #pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    span{
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    #paginationbtn{
+        color: white;
+        font-size: 25px;
+            border-radius: 5px;
+            border: none;
+            background-color: transparent;
+            color: $main-color;
+        &:hover{
+            color: black;
+            transition: 0.3s;
+            
         }
+    }
+  }
         .title{
             margin-top: 30px;
             margin-bottom: 30px;

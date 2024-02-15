@@ -1,34 +1,54 @@
-const ourproducts = document.getElementById ('ourproducts')
-const pagination = document.getElementById('pagination')
+const ourproducts = document.getElementById('ourproducts');
+const pagination = document.getElementById('pagination');
+const nextButtonContainer = document.getElementById('nextButtonContainer');
+let currentPage = 1;
 
-function getproducts () {
+function getProducts(page) {
+  axios.get(`https://655c2fe4ab37729791aa011f.mockapi.io/swp102/products?page=${page}&limit=4`)
+    .then(res => {
+      products = res.data;
+      ourproducts.innerHTML = '';
 
-     axios.get(`https://655c2fe4ab37729791aa011f.mockapi.io/swp102/products`)
-    .then(res=>{
-        products = res.data
-       products.map((item,index)=>{
-            let box = document.createElement('div')
-            box.className = 'box col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3'
+      products.map((item, index) => {
+        let box = document.createElement('div');
+        box.className = 'box col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3';
         box.innerHTML = `
-        <div class="boxproducts">
-        <img src="${item.image}" alt="">
-        <h1>${item.Name}</h1>
-        <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+          <div class="boxproducts">
+            <img src="${item.image}" alt="">
+            <h1>${item.Name}</h1>
+            <p>${item.CurrentBid}</p>
+            <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+            <div class="btns">
+              <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i></button>
+              <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
+            </div>
+          </div>
+        `;
+        ourproducts.appendChild(box);
+      });
 
-      <div class="btns">
-    <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i>
-    </button>
-    <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
-
-</div>
-</div>
-        `
-    
-        ourproducts.appendChild(box)
-        })
-      
+      // Sayfa sonuna gelindiğinde Next butonunu kontrol et
+      if (products.length < 4) {
+        nextButtonContainer.style.display = 'none';
+      } else {
+        nextButtonContainer.style.display = 'block';
+      }
     })
+    .catch(error => console.error('Error fetching products:', error));
 }
+
+getProducts(currentPage);
+
+function changePage(pageChange) {
+  currentPage += pageChange;
+  if (currentPage < 1) {
+    currentPage = 1;
+  }
+  document.getElementById('currentPage').innerText = currentPage;
+  getProducts(currentPage);
+}
+
+
 function addtodetailpage(id) {
   let detailpage = JSON.parse(localStorage.getItem('detailpage')) || [];
       detailpage.push(products.find(item => item.id == id));
@@ -38,11 +58,10 @@ function addtodetailpage(id) {
   }
   localStorage.setItem('detailpage', JSON.stringify(detailpage));
 }
-getproducts()
+getProducts()
 
 
 function addtoorderpage(id) {
-  // Order page için güncelleme
   let orderpage = JSON.parse(localStorage.getItem('orderpage')) || [];
   orderpage.push(products.find(item => item.id == id));
   const maxOrderPageItems = 1;
@@ -51,7 +70,6 @@ function addtoorderpage(id) {
   }
   localStorage.setItem('orderpage', JSON.stringify(orderpage));
 
-  // My Orders için güncelleme
   let myorders = JSON.parse(localStorage.getItem('myorders')) || [];
   let selectedProduct = products.find(item => item.id == id);
 
@@ -63,15 +81,8 @@ function addtoorderpage(id) {
     console.error('Ürün bulunamadı.');
   }
 
-  // Sayfayı yönlendirme
   window.location.href = 'orderpage.html';
 }
-
-
-
-
-
-
 
 function addtowishlist(id){
   let wishlist= JSON.parse(localStorage.getItem('wishlist')) || []
@@ -105,17 +116,21 @@ function searchbyname(e) {
         const sortproducts = document.createElement('div');
         sortproducts.className = "box col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3"
         sortproducts.innerHTML = `
-          <div class="boxproducts">
-            <img src="${item.image}" alt="">
-            <h1>${item.Name}</h1>
-   
-            <button class="detailbtn"   onclick="openProductDetail(${item.id})">View Details</button>
-            <div class="btns">
-            <button onclick="addtobasket(${item.id})"><i class="fa-solid fa-cart-shopping"></i></button>
-            <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
-        
-        </div>
-          </div>
+        <div class="boxproducts">
+        <img src="${item.image}" alt="">
+        <h1>${item.Name}</h1>
+        <p>
+        ${item.CurrentBid}
+    </p>
+        <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+
+      <div class="btns">
+    <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i>
+    </button>
+    <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
+
+</div>
+</div>
         `;
         ourproducts.appendChild(sortproducts);
       });
@@ -142,14 +157,18 @@ function sortdatadefault(){
                 <div class="boxproducts">
                 <img src="${item.image}" alt="">
                 <h1>${item.Name}</h1>
-  
-                <button class="detailbtn"  onclick="openProductDetail(${item.id})">View Details</button>
-                <div class="btns">
-                <button onclick="addtobasket(${item.id})"><i class="fa-solid fa-cart-shopping"></i></button>
-                <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
-            
-            </div>
-              </div>
+                <p>
+                ${item.CurrentBid}
+            </p>
+                <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+        
+              <div class="btns">
+            <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i>
+            </button>
+            <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
+        
+        </div>
+        </div>
                 `
              ourproducts.appendChild(box)
             })
@@ -176,14 +195,18 @@ function sortdatadefault(){
                     <div class="boxproducts">
                     <img src="${item.image}" alt="">
                     <h1>${item.Name}</h1>
-     
-                    <button class="detailbtn"  onclick="openProductDetail(${item.id})">View Details</button>
-                    <div class="btns">
-                    <button onclick="addtobasket(${item.id})"><i class="fa-solid fa-cart-shopping"></i></button>
-                    <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
-                
-                </div>
-                  </div>
+                    <p>
+                    ${item.CurrentBid}
+                </p>
+                    <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+            
+                  <div class="btns">
+                <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i>
+                </button>
+                <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
+            
+            </div>
+            </div>
                     `
                   ourproducts.appendChild(box)
                 })
@@ -208,13 +231,18 @@ function sortdatadefault(){
                         <div class="boxproducts">
                         <img src="${item.image}" alt="">
                         <h1>${item.Name}</h1>
-                                            <button onclick="openProductDetail(${item.id})">View Details</button>
-                        <div class="btns">
-                        <button onclick="addtobasket(${item.id})"><i class="fa-solid fa-cart-shopping"></i></button>
-                        <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
-                    
-                    </div>
-                      </div>
+                        <p>
+                        ${item.CurrentBid}
+                    </p>
+                        <button class="detailbtn" onclick="addtodetailpage(${item.id})"><a href="/detailpage.html">View Details</a></button>
+                
+                      <div class="btns">
+                    <button onclick="addtoorderpage(${item.id})"><i class="fa-solid fa-gavel"></i>
+                    </button>
+                    <button onclick="addtowishlist(${item.id})"><i class="fa-regular fa-heart"></i></button>
+                
+                </div>
+                </div>
                         `
                        ourproducts.appendChild(box)
                     })

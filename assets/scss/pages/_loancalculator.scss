@@ -31,7 +31,8 @@
       margin-bottom: 30px;
   
       h1 {
-        color: #333;
+        color: $main-color;
+        font-size: 30px;
       }
   
       .input-group {
@@ -54,7 +55,7 @@
       }
   
       button {
-        background-color: #4caf50;
+        background-color: $main-color;
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -64,7 +65,9 @@
         transition: background-color 0.3s ease;
   
         &:hover {
-          background-color: #45a049;
+          background-color: white;
+          color: $main-color;
+          transition: 0.3s;
         }
       }
   
