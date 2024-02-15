@@ -1031,7 +1031,6 @@ main #newspage .commentandrating form button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   background-image: url("http://pictures.dealer.com/l/lithiabmwseattle/0627/002ba2a03df70d83d63c9e2984cefafex.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1239,6 +1238,12 @@ header .container {
 }
 header .container .nav {
   z-index: 1000;
+}
+header .container .nav .hamburger {
+  border: none;
+}
+header .container .nav .hamburger span {
+  color: #FF2800;
 }
 header .container .nav img {
   width: 60%;
